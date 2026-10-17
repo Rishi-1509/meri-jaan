@@ -1147,49 +1147,5 @@ export const galleryPhotos: GalleryPhoto[] = [
     "alt": "Rishi & Apeksha - Memory 100",
     "layoutStyle": "polaroid",
     "rotation": -1
-  },
-  {
-    "id": "memory-101",
-    "src": "/images/memories/memory-101.jpg",
-    "caption": "Amulu kutti stealing my heart all over again",
-    "date": "2026",
-    "category": "Cute Moments",
-    "featured": false,
-    "alt": "Rishi & Apeksha - Memory 101",
-    "layoutStyle": "editorial",
-    "rotation": 3
-  },
-  {
-    "id": "memory-102",
-    "src": "/images/memories/memory-102.jpg",
-    "caption": "When you smile at me like this, I forget everything else",
-    "date": "2026",
-    "category": "Funny Us",
-    "featured": false,
-    "alt": "Rishi & Apeksha - Memory 102",
-    "layoutStyle": "scrapbook",
-    "rotation": 1
-  },
-  {
-    "id": "memory-103",
-    "src": "/images/memories/memory-103.jpg",
-    "caption": "Another unscripted, beautiful page in Bubu & Dudu's love story",
-    "date": "2026",
-    "category": "Favorite Memories",
-    "featured": false,
-    "alt": "Rishi & Apeksha - Memory 103",
-    "layoutStyle": "wide",
-    "rotation": -3
-  },
-  {
-    "id": "memory-104",
-    "src": "/images/memories/memory-104.jpg",
-    "caption": "Holding hands and never wanting to let go",
-    "date": "2026",
-    "category": "Special Days",
-    "featured": false,
-    "alt": "Rishi & Apeksha - Memory 104",
-    "layoutStyle": "polaroid",
-    "rotation": 0
   }
 ];
