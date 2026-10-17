@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Little Universe For Her ❤️</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #17172F; color: #FFF8F0; }
+    .section { padding: 4rem 1rem; max-width: 1200px; margin: auto; }
+    .polaroid { position: relative; padding: 0.5rem; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+    .polaroid img { display: block; width: 100%; height: auto; }
+    .quiz-answer { cursor: pointer; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #2D1B36; border: 1px solid #D8B778; border-radius: 0.5rem; }
+    .quiz-answer:hover { background: #2A182E; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="font-sans overflow-x-hidden">
+  <!-- Opening -->
+  <section class="section text-center">
+    <h1 class="text-4xl font-bold mb-4">Hey, Apeksha… ❤️</h1>
+    <p class="text-lg">I made a little something for you.</p>
+  </section>
+
+  <!-- Story (8 chapters) -->
+  <section class="section">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Our Story</h2>
+    <div class="space-y-8">
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 1: The First Glance</h3><p>One day when I was walking up the stairs to class, I saw her practicing drill…</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 2: The Ride</h3><p>She asked for a ride to the railway station at 5 am…</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 3: The Mess Encounter</h3><p>We kept talking about schooling while I showed her the map…</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 4: The First Holi</h3><p>She invited me to celebrate Holi, my first one with her.</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 5: The Temple</h3><p>We visited the biggest Hanuman temple in Pondicherry together.</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 6: The Beach</h3><p>We spent a day at Verampattinam beach, talking and laughing.</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 7: The Proposal Moment</h3><p>At the Panchavadi temple she whispered “I love you”.</p></div>
+      <div><h3 class="text-2xl font-medium mb-2">Chapter 8: Forever Us</h3><p>Countless dates, coffee shops, rides, and dreams together.</p></div>
+    </div>
+  </section>
+
+  <!-- Photo Album -->
+  <section class="section" id="album">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Album of Memories</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- Render first 12 photos as example; the rest will load similarly -->
+      <!-- Each photo is displayed without caption/date/location -->
+      <div class="polaroid" data-id="memory-01"><img src="/images/memories/memory-01.jpg" alt="Memory 1" /></div>
+      <div class="polaroid" data-id="memory-02"><img src="/images/memories/memory-02.jpg" alt="Memory 2" /></div>
+      <div class="polaroid" data-id="memory-03"><img src="/images/memories/memory-03.jpg" alt="Memory 3" /></div>
+      <div class="polaroid" data-id="memory-04"><img src="/images/memories/memory-04.jpg" alt="Memory 4" /></div>
+      <div class="polaroid" data-id="memory-05"><img src="/images/memories/memory-05.jpg" alt="Memory 5" /></div>
+      <div class="polaroid" data-id="memory-06"><img src="/images/memories/memory-06.jpg" alt="Memory 6" /></div>
+      <div class="polaroid" data-id="memory-07"><img src="/images/memories/memory-07.jpg" alt="Memory 7" /></div>
+      <div class="polaroid" data-id="memory-08"><img src="/images/memories/memory-08.jpg" alt="Memory 8" /></div>
+      <div class="polaroid" data-id="memory-09"><img src="/images/memories/memory-09.jpg" alt="Memory 9" /></div>
+      <div class="polaroid" data-id="memory-10"><img src="/images/memories/memory-10.jpg" alt="Memory 10" /></div>
+      <div class="polaroid" data-id="memory-11"><img src="/images/memories/memory-11.jpg" alt="Memory 11" /></div>
+      <div class="polaroid" data-id="memory-12"><img src="/images/memories/memory-12.jpg" alt="Memory 12" /></div>
+    </div>
+  </section>
+
+  <!-- Little Things About You -->
+  <section class="section" id="little-things">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Little Things I Love About You</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Your smile lights up my whole universe.</li>
+      <li>The way you say my name.</li>
+      <li>Your love for Hanuman and the temples.</li>
+      <li>The cute “cutu” face you make.</li>
+      <li>How you always keep the playlist on repeat.</li>
+    </ul>
+  </section>
+
+  <!-- Quiz -->
+  <section class="section" id="quiz">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Our Relationship Quiz</h2>
+    <div id="quiz-container" class="max-w-xl mx-auto bg-[#2D1B36] p-6 rounded-lg">
+      <p id="quiz-question" class="mb-4 text-xl"></p>
+      <div id="quiz-answers" class="space-y-2"></div>
+      <p id="quiz-feedback" class="mt-4 text-green-400 hidden"></p>
+    </div>
+  </section>
+
+  <!-- Love Letter -->
+  <section class="section" id="love-letter">
+    <h2 class="text-3xl font-semibold mb-6 text-center">A Wax‑Sealed Love Letter</h2>
+    <div class="prose prose-sm text-[#FFF8F0] mx-auto">
+      <p>My dearest Apeksha,</p>
+      <p>From the moment I saw you on the stairs, my heart has been forever captured. Every ride, every sunrise, every shared song… they are all threads in the tapestry of us.</p>
+      <p>I promise to cherish you, to laugh with you, to stand by you, and to love you endlessly.</p>
+      <p>Yours forever,</p>
+      <p><strong>Rishi</strong></p>
+    </div>
+  </section>
+
+  <!-- Birthday Wish -->
+  <section class="section" id="birthday-wish">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Birthday Finale</h2>
+    <div class="flex justify-center items-center">
+      <img src="/images/birthday-cake.png" alt="Birthday cake" class="w-64 h-auto" />
+    </div>
+    <p class="text-center mt-4 text-xl">Happy 19th Birthday, my love! 🎂❤️</p>
+  </section>
+
+  <!-- Simple Quiz Logic -->
+  <script>
+    const quizData = [
+      { q: "Where did we first meet?", a: ["Stairs", "Library", "Cafeteria"], correct: 0 },
+      { q: "What time was our early ride?", a: ["4 am", "5 am", "6 am"], correct: 1 },
+      { q: "Which temple did we visit first?", a: ["Anna Temple", "Panchavadi", "Shiva Temple"], correct: 0 },
+    ];
+    let current = 0;
+    const questionEl = document.getElementById('quiz-question');
+    const answersEl = document.getElementById('quiz-answers');
+    const feedbackEl = document.getElementById('quiz-feedback');
+    function renderQuestion() {
+      const q = quizData[current];
+      questionEl.textContent = q.q;
+      answersEl.innerHTML = '';
+      q.a.forEach((ans, idx) => {
+        const div = document.createElement('div');
+        div.className = 'quiz-answer';
+        div.textContent = ans;
+        div.onclick = () => checkAnswer(idx);
+        answersEl.appendChild(div);
+      });
+    }
+    function checkAnswer(idx) {
+      if (idx === quizData[current].correct) {
+        feedbackEl.textContent = 'Correct! 🎉';
+        feedbackEl.classList.remove('hidden');
+      } else {
+        feedbackEl.textContent = 'Oops, try again.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+      current++;
+      if (current < quizData.length) {
+        setTimeout(() => { feedbackEl.classList.add('hidden'); renderQuestion(); }, 1200);
+      } else {
+        setTimeout(() => { feedbackEl.textContent = 'You completed the quiz! 💖'; }, 1200);
+      }
+    }
+    renderQuestion();
+  </script>
+</body>
+</html>

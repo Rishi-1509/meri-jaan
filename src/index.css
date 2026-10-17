@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-blush: #F4C7CF;
+    --color-rose: #D98C9B;
+    --color-ivory: #FFF8F0;
+    --color-burgundy: #542839;
+    --color-lavender: #DAD5F2;
+    --color-gold: #D8B778;
+    --color-navy: #17172F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #17172F;
+    color: #FFF8F0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-serif-romantic {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-display-romantic {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-script-romantic {
+  font-family: 'Caveat', cursive;
+}
+
+.font-calligraphy {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #17172F;
+}
+::-webkit-scrollbar-thumb {
+  background: #542839;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D98C9B;
+}
+
+/* Scrapbook and Film effects */
+.paper-texture {
+  background-color: #FFF8F0;
+  background-image: radial-gradient(#d98c9b 0.5px, transparent 0.5px), radial-gradient(#d98c9b 0.5px, #FFF8F0 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.tape-top {
+  position: relative;
+}
+.tape-top::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 90px;
+  height: 24px;
+  background-color: rgba(244, 199, 207, 0.6);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(23, 23, 47, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 183, 120, 0.2);
+}
+
+.glass-panel-light {
+  background: rgba(255, 248, 240, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(217, 140, 155, 0.3);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; }
+  25% { transform: scale(1.08, 0.96) rotate(1deg); opacity: 1; }
+  50% { transform: scale(0.96, 1.05) rotate(-0.5deg); opacity: 0.9; }
+  75% { transform: scale(1.04, 1.02) rotate(1.5deg); opacity: 0.98; }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-flicker {
+  animation: candleFlicker 1.2s ease-in-out infinite alternate;
+}
