@@ -77,7 +77,16 @@ export const BirthdayFinaleSection: React.FC<BirthdayFinaleSectionProps> = ({ on
                     <img
                       src={photo.src}
                       alt={photo.alt}
-                      onError={() => handleCollageError(photo.id)}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/images/memories/')) {
+                          target.src = target.src.replace('/images/memories/', '/memories/');
+                        } else if (target.src.includes('/memories/')) {
+                          target.src = target.src.replace('/memories/', '/images/memories/');
+                        } else {
+                          handleCollageError(photo.id);
+                        }
+                      }}
                       className="w-full h-full object-cover"
                     />
                   ) : (

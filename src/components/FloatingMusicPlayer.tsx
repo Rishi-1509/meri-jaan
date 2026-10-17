@@ -127,6 +127,12 @@ export const FloatingMusicPlayer: React.FC<FloatingMusicPlayerProps> = ({
               setDuration(audioRef.current.duration || 0);
             }
           }}
+          onError={(e) => {
+            const el = e.currentTarget;
+            if (el.src.includes('/audio/')) {
+              el.src = el.src.replace('/audio/', '/');
+            }
+          }}
           onEnded={handleNext}
         />
       )}

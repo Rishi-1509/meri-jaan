@@ -21,6 +21,17 @@ export const PolaroidCard: React.FC<PolaroidCardProps> = ({
 }) => {
   const [hasError, setHasError] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+  const [imgSrc, setImgSrc] = useState(photo.src);
+
+  const handleImageError = () => {
+    if (imgSrc.startsWith('/images/memories/')) {
+      setImgSrc(imgSrc.replace('/images/memories/', '/memories/'));
+    } else if (imgSrc.startsWith('/memories/')) {
+      setImgSrc(imgSrc.replace('/memories/', '/images/memories/'));
+    } else {
+      setHasError(true);
+    }
+  };
 
   // Dynamic tilt for scrapbook aesthetic
   const rotation = photo.rotation ?? 0;
@@ -49,10 +60,10 @@ export const PolaroidCard: React.FC<PolaroidCardProps> = ({
         <div className="relative aspect-square w-full overflow-hidden bg-[#2D1B36] rounded-sm">
           {!hasError ? (
             <img
-              src={photo.src}
+              src={imgSrc}
               alt={photo.alt}
               loading="lazy"
-              onError={() => setHasError(true)}
+              onError={handleImageError}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           ) : (

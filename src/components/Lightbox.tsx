@@ -148,7 +148,16 @@ export const Lightbox: React.FC<LightboxProps> = ({
             <img
               src={activePhoto.src}
               alt={activePhoto.alt}
-              onError={() => setImgError(true)}
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (target.src.includes('/images/memories/')) {
+                  target.src = target.src.replace('/images/memories/', '/memories/');
+                } else if (target.src.includes('/memories/')) {
+                  target.src = target.src.replace('/memories/', '/images/memories/');
+                } else {
+                  setImgError(true);
+                }
+              }}
               className="max-h-[78vh] w-auto max-w-full object-contain mx-auto transition-opacity duration-300"
             />
           ) : (
